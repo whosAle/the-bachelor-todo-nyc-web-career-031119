@@ -24,5 +24,6 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  age = 0.0
+  data.each { |season, info| info.each { |person, v| age += person["age"].to_f } }
 end
