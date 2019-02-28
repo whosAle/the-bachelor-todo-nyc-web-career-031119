@@ -15,18 +15,12 @@ end
 def count_contestants_by_hometown(data, hometown)
   counter = 0
   data.each { |season, info| info.each { |person, v| counter += 1 if person["hometown"] == hometown } }
-  # data.each do |season, v|
-  #   v.each do |person, info|
-  #     if person["hometown"] == hometown
-  #       return person["name"]
-  #     end
-  #   end
-  # end
+
   counter
 end
 
 def get_occupation(data, hometown)
-  # code here
+  data.each { |season, info| info.each { |person, v| return person["name"] if person["hometown"] == hometown } }
 end
 
 def get_average_age_for_season(data, season)
